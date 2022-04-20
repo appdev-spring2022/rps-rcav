@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  layout(false)
+  layout("wrapper.html.erb")
 
   # Add your actions below this line
   # ================================
@@ -29,8 +29,7 @@ class ApplicationController < ActionController::Base
       @outcome = "tied"
     end
 
-    render ({:template => "game_templates/user_scissors.html.erb"})
+    render ({:template => "game_templates/user_scissors.html.erb" , :layout => "wrapper.html.erb"})
   end
 
 end
-
